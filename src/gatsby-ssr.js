@@ -48,7 +48,7 @@ function buildTrackingCode(pluginOptions) {
       }
       window._paq.push(['setTrackerUrl', '${matomoUrl}/${matomoPhpScript}']);
       window._paq.push(['setSiteId', '${siteId}']);
-      window._paq.push(['addTracker', '${secondaryMatomoUrl}',${secondarySiteId}]);
+      window._paq.push(['addTracker', '${secondaryMatomoUrl}/matomo.php',${secondarySiteId}]);
       
       window._paq.push(['enableHeartBeatTimer']);
       window.start = new Date();
