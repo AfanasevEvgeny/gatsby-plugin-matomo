@@ -60,7 +60,7 @@ function buildTrackingCode(pluginOptions) {
 
       if (window.dev === true) {
         console.debug('[Matomo] Tracking initialized')
-        console.debug('[Matomo] matomoUrl: ${matomoUrl}, siteId: ${siteId}')
+        console.debug('[Matomo] matomoUrl: ${matomoUrl}/matomo.php, siteId: ${siteId}')
       }
     }
   `
