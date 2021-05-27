@@ -14,7 +14,9 @@ function buildTrackingCode(pluginOptions) {
     disableCookies,
     cookieDomain,
     enableJSErrorTracking,
-    respectDnt = true
+    respectDnt = true,
+    secondaryMatomoUrl,
+    secondarySiteId
   } = pluginOptions
 
   const script = localScript ? localScript : `${matomoUrl}/${matomoJsScript}`
@@ -46,6 +48,8 @@ function buildTrackingCode(pluginOptions) {
       }
       window._paq.push(['setTrackerUrl', '${matomoUrl}/${matomoPhpScript}']);
       window._paq.push(['setSiteId', '${siteId}']);
+      window._paq.push(['addTracker', '${secondaryMatomoUrl}',${secondarySiteId}]);
+      
       window._paq.push(['enableHeartBeatTimer']);
       window.start = new Date();
 
